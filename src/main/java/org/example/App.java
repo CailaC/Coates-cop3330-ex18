@@ -18,20 +18,26 @@ public class App {
 
         int f =0;
         int c =0;
+        int temp = 0;
+        String wTemp = "";
+        String fTemp = "Fahrenheit";
+        String cTemp = "Celcius";
 
         if (startingType.equalsIgnoreCase("C")) {
             System.out.printf("Your choice: C\nPlease enter the temperature in Fahrenheit ");
             int tempF = input.nextInt();
             c = (tempF - 32) * 5 / 9;
-            System.out.println("The temperature in Celsius is " + c + ".");
+            temp = c;
+            wTemp = cTemp;
         } else if (startingType.equalsIgnoreCase("F")) {
             System.out.printf("Your choice: F\nPlease enter the temperature in Celsius ", startingType);
             int tempC = input.nextInt();
             f = (tempC * 9 / 5) + 32;
-            System.out.println("The temperature in Fahrenheit is " + f + ".");
+            temp = f;
+            wTemp = fTemp;
         }
 
-
+        System.out.println("The temperature in " + wTemp + " is " + temp + ".");
 
     }
 }
